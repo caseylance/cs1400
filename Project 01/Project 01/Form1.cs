@@ -37,7 +37,8 @@ namespace Project_01
             double numOne = double.Parse(numOneTxtBox.Text);
             double numTwo = double.Parse(numTwoTxtBox.Text);
             double prod = numOne * numTwo;
-            resultTxtBox.Text = prod.ToString();
+            string result = string.Format("{0:D}", prod.ToString());
+            resultTxtBox.Text = result;
         }
 
         private void qoutButton_Click(object sender, EventArgs e)
