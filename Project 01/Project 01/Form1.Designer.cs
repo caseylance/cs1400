@@ -33,16 +33,16 @@ namespace Project_01
         /// </summary>
         private void InitializeComponent()
         {
-            this.numOne = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.numOneTxtBox = new System.Windows.Forms.TextBox();
+            this.sumButton = new System.Windows.Forms.Button();
+            this.prodButton = new System.Windows.Forms.Button();
+            this.clearButton = new System.Windows.Forms.Button();
+            this.numTwoTxtBox = new System.Windows.Forms.TextBox();
+            this.diffButton = new System.Windows.Forms.Button();
+            this.qoutButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.resultTxtBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,69 +51,74 @@ namespace Project_01
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // numOne
+            // numOneTxtBox
             // 
-            this.numOne.Location = new System.Drawing.Point(87, 55);
-            this.numOne.Name = "numOne";
-            this.numOne.Size = new System.Drawing.Size(100, 20);
-            this.numOne.TabIndex = 0;
+            this.numOneTxtBox.Location = new System.Drawing.Point(87, 55);
+            this.numOneTxtBox.Name = "numOneTxtBox";
+            this.numOneTxtBox.Size = new System.Drawing.Size(100, 20);
+            this.numOneTxtBox.TabIndex = 0;
             // 
-            // button1
+            // sumButton
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(421, 37);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(21, 21);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "+";
-            this.button1.UseVisualStyleBackColor = true;
+            this.sumButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sumButton.Location = new System.Drawing.Point(426, 37);
+            this.sumButton.Name = "sumButton";
+            this.sumButton.Size = new System.Drawing.Size(21, 21);
+            this.sumButton.TabIndex = 1;
+            this.sumButton.Text = "+";
+            this.sumButton.UseVisualStyleBackColor = true;
+            this.sumButton.Click += new System.EventHandler(this.sumButton_Click_1);
             // 
-            // button2
+            // prodButton
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(403, 55);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(21, 21);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "*";
-            this.button2.UseVisualStyleBackColor = true;
+            this.prodButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prodButton.Location = new System.Drawing.Point(408, 55);
+            this.prodButton.Name = "prodButton";
+            this.prodButton.Size = new System.Drawing.Size(21, 21);
+            this.prodButton.TabIndex = 2;
+            this.prodButton.Text = "*";
+            this.prodButton.UseVisualStyleBackColor = true;
+            this.prodButton.Click += new System.EventHandler(this.prodButton_Click);
             // 
-            // button3
+            // clearButton
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(286, 108);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 25);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Clear";
-            this.button3.UseVisualStyleBackColor = true;
+            this.clearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearButton.Location = new System.Drawing.Point(286, 108);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(100, 25);
+            this.clearButton.TabIndex = 3;
+            this.clearButton.Text = "Clear";
+            this.clearButton.UseVisualStyleBackColor = true;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
-            // textBox1
+            // numTwoTxtBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(286, 55);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 4;
+            this.numTwoTxtBox.Location = new System.Drawing.Point(286, 55);
+            this.numTwoTxtBox.Name = "numTwoTxtBox";
+            this.numTwoTxtBox.Size = new System.Drawing.Size(100, 20);
+            this.numTwoTxtBox.TabIndex = 4;
             // 
-            // button4
+            // diffButton
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(421, 73);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(21, 21);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "-";
-            this.button4.UseVisualStyleBackColor = true;
+            this.diffButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.diffButton.Location = new System.Drawing.Point(426, 73);
+            this.diffButton.Name = "diffButton";
+            this.diffButton.Size = new System.Drawing.Size(21, 21);
+            this.diffButton.TabIndex = 5;
+            this.diffButton.Text = "-";
+            this.diffButton.UseVisualStyleBackColor = true;
+            this.diffButton.Click += new System.EventHandler(this.diffButton_Click);
             // 
-            // button5
+            // qoutButton
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(439, 55);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(21, 21);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "/";
-            this.button5.UseVisualStyleBackColor = true;
+            this.qoutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.qoutButton.Location = new System.Drawing.Point(444, 55);
+            this.qoutButton.Name = "qoutButton";
+            this.qoutButton.Size = new System.Drawing.Size(21, 21);
+            this.qoutButton.TabIndex = 6;
+            this.qoutButton.Text = "/";
+            this.qoutButton.UseVisualStyleBackColor = true;
+            this.qoutButton.Click += new System.EventHandler(this.qoutButton_Click);
             // 
             // label1
             // 
@@ -133,12 +138,12 @@ namespace Project_01
             this.label2.TabIndex = 8;
             this.label2.Text = "Second Number:";
             // 
-            // textBox2
+            // resultTxtBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(530, 55);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 9;
+            this.resultTxtBox.Location = new System.Drawing.Point(530, 55);
+            this.resultTxtBox.Name = "resultTxtBox";
+            this.resultTxtBox.Size = new System.Drawing.Size(100, 20);
+            this.resultTxtBox.TabIndex = 9;
             // 
             // label3
             // 
@@ -173,12 +178,14 @@ namespace Project_01
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -186,16 +193,16 @@ namespace Project_01
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(648, 160);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.resultTxtBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.numOne);
+            this.Controls.Add(this.qoutButton);
+            this.Controls.Add(this.diffButton);
+            this.Controls.Add(this.numTwoTxtBox);
+            this.Controls.Add(this.clearButton);
+            this.Controls.Add(this.prodButton);
+            this.Controls.Add(this.sumButton);
+            this.Controls.Add(this.numOneTxtBox);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
@@ -209,16 +216,16 @@ namespace Project_01
 
         #endregion
 
-        private System.Windows.Forms.TextBox numOne;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox numOneTxtBox;
+        private System.Windows.Forms.Button sumButton;
+        private System.Windows.Forms.Button prodButton;
+        private System.Windows.Forms.Button clearButton;
+        private System.Windows.Forms.TextBox numTwoTxtBox;
+        private System.Windows.Forms.Button diffButton;
+        private System.Windows.Forms.Button qoutButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox resultTxtBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
