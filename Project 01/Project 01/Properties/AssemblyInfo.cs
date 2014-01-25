@@ -1,4 +1,9 @@
-﻿using System.Reflection;
+﻿//Casey Lance
+//CS 1400
+//Project #1
+//---------------------------------------------------------------------
+
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
