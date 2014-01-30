@@ -20,73 +20,75 @@ namespace lab7
         private void button1_Click(object sender, EventArgs e)
         {
             //Get total gold on ship
-            double totalGold = double.Parse(totalGoldTxtBox.Text);
+            int totalGold = int.Parse(totalGoldTxtBox.Text);
 
             //Get total number of pirates on ship
-            double totalPirates = double.Parse(totalPiratesTxtBox.Text);
+            int totalPirates = int.Parse(totalPiratesTxtBox.Text);
 
             //Get total number of pirates that are not the captain or first officer
-            double totalCrew = totalPirates - 2;
+            int totalCrew = totalPirates - 2;
 
             //Get total amount of gold given to the crew for town
-            double totalCrewMembersTownGold = totalCrew * 3;
+            int totalCrewMembersTownGold = totalCrew * 3;
 
             //Get remaining gold after giving gold to crew for town
-            double totalAfterCrewMemberTownGold = totalGold - totalCrewMembersTownGold;
+            int totalAfterCrewMemberTownGold = totalGold - totalCrewMembersTownGold;
 
             //Get twelve percent of gold for captain
-            double captainsTwelvePercent = totalAfterCrewMemberTownGold * .12;
+            double captainsTwelvePercent =  totalAfterCrewMemberTownGold * .12;
+
+            //Convert captainsTwelvePercent to an integer
+            int intCaptainsTwelvePercent = (int)captainsTwelvePercent;
        
             //Deduct captains twelve percent from the remainder after the crews town gold
-            double afterCaptainsTwelvePercent = totalAfterCrewMemberTownGold - captainsTwelvePercent;
-           
-
+            int afterCaptainsTwelvePercent = totalAfterCrewMemberTownGold - intCaptainsTwelvePercent;
+            
             //Get First Officer's eight percent
             double firstOfficersEightPercent = afterCaptainsTwelvePercent * .08;
             
+            //Convert First Officer's eight percent to an integer
+            int intFirstOfficersEightPercent = (int)firstOfficersEightPercent;
             
             //Deduct first officer's eight percent from remaining after deducting the captains 12 percent
             
-            double totalToDivide = afterCaptainsTwelvePercent - firstOfficersEightPercent;
+            int totalToDivide = afterCaptainsTwelvePercent - intFirstOfficersEightPercent;
             
             //Divde remaining gold after captain and first officers share by total pirates
-            double crewSubTotal = totalToDivide / totalPirates;
-            //add total amount per crew member to captains twelve percent to get his total
-            double captainsTotalGold = crewSubTotal + captainsTwelvePercent;
-            //add total amount per crew member to first officer's eight percent to get his total
-            double firstOfficersTotalGold = crewSubTotal + firstOfficersEightPercent;
-            //add three to the amount per crew member to get the total amount per crew member
-            double crewMemberTotalGold = crewSubTotal;
-            //Modulus divide the total amount of gold by total number of pirates to get benevolent fund amount
-            double totalBenevolentGold = totalToDivide % totalPirates;
-          
             
+            int crewSubTotal = totalToDivide / totalPirates;
+
+            //add total amount per crew member to captains twelve percent to get his total
+            int captainsTotalGold = crewSubTotal + intCaptainsTwelvePercent;
+
+            //add total amount per crew member to first officer's eight percent to get his total
+            int firstOfficersTotalGold = crewSubTotal + intFirstOfficersEightPercent;
+            
+            //add three to the amount per crew member to get the total amount per crew member
+            int crewMemberTotalGold = crewSubTotal + 3;
+            
+            //Modulus divide the total amount of gold by total number of pirates to get benevolent fund amount
+            int totalBenevolentGold = totalToDivide % totalPirates;
+                    
 
 
             //Display captains gold amount
-            int intCaptainsTotalGold = (int)captainsTotalGold;
-            string totalCaptainsGold = string.Format("{0:0.0}", intCaptainsTotalGold);
+            string totalCaptainsGold = string.Format("{0:0.0}", captainsTotalGold);
             totalCaptainsGoldTxtBox.Text = totalCaptainsGold;
 
-            //Display first officers gold mount
-            int intFirstOfficersTotalGold = (int)firstOfficersTotalGold;
-            string totalFirstOfficersGold = string.Format("{0:0.0}", intFirstOfficersTotalGold);
+            //Display first officers gold amount
+            string totalFirstOfficersGold = string.Format("{0:0.0}", firstOfficersTotalGold);
             totalFirstOfficersGoldTxtBox.Text = totalFirstOfficersGold;
 
             //Display crew member gold amount
-            int intCrewMemberTotalGold = (int)crewMemberTotalGold;
-            string totalCrewMemberGold = string.Format("{0:0.0}", intCrewMemberTotalGold);
+            string totalCrewMemberGold = string.Format("{0:0.0}", crewMemberTotalGold);
             totalCrewMemberGoldTxtBox.Text = totalCrewMemberGold;
 
-            double ben = (captainsTotalGold - intCaptainsTotalGold) + (firstOfficersTotalGold - intFirstOfficersTotalGold) + ((crewMemberTotalGold *totalCrew) - (intCrewMemberTotalGold * totalCrew));
-
-            //Display benevelont fund gold
-            //string totalBenevolentFundGold = string.Format("{0:0.0}", totalBenevolentGold);
-            //totalBenevolentFundGoldTxtBox.Text = totalBenevolentFundGold;
-
-            string totalBenevolentFundGold = string.Format("{0:0.0}", ben);
+         
+            //Display benevolent fund gold
+            string totalBenevolentFundGold = string.Format("{0:0.0}", totalBenevolentGold);
             totalBenevolentFundGoldTxtBox.Text = totalBenevolentFundGold;
-           
+            
+        
             
         }
     }
