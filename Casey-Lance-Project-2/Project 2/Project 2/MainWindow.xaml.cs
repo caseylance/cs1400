@@ -37,33 +37,43 @@ namespace Project_2
         {
             InitializeComponent();
         }
-
+       
+        //Display personal information when user clicks "About" in the File drop down menu 
        private void about_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Casey Lance\nCS1400\nProject #2");
         }
-
+       
+        // Close application when user click "Close" in the File drop down menu
        private void close_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
 
+        //Calculate and display the number of rotations per mile when the user clicks "Calculate" button
         private void calculateButton_Click(object sender, RoutedEventArgs e)
         {
+            //Store inches per mile
             const double INCHES_PER_MILE = 63360;
-
+            
+            //User enteres wheel diameter in the Wheel Diameter Text Box.  
+            //Inches per mile is divided by the diameter multiplied by PI and displayed
+            //in the Turns Per Mile Text Box
+         
             turnsPerMileTxtBox.Text = string.Format("{0:F}",
             INCHES_PER_MILE / ((double.Parse(wheelDiameterTxtBox.Text)) * Math.PI));
 
 
         }
 
+        //Clears text boxes when user clicks reset button
         private void resetButton_Click(object sender, RoutedEventArgs e)
         {
             wheelDiameterTxtBox.Text = String.Empty;
             turnsPerMileTxtBox.Text = String.Empty;
         }
 
+        //Closes the application when the user clicks the exit button
         private void exitButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
