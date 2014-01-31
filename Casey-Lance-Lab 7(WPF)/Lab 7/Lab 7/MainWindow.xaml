@@ -21,8 +21,8 @@
                 <BevelBitmapEffect/>
             </Menu.BitmapEffect>
             <MenuItem Header="_File" FontWeight="Bold">
-                <MenuItem x:Name="About" Header="_About" Click="MenuItem_Click"/>
-                <MenuItem x:Name="Close" Header="_Close" Click="MenuItem_Click_1"/>
+                <MenuItem x:Name="about" Header="_About" Click="MenuItem_Click"/>
+                <MenuItem x:Name="close" Header="_Close" Click="MenuItem_Click_1"/>
             </MenuItem>
         </Menu>
         <TextBlock HorizontalAlignment="Left" Margin="148,27,0,0" TextWrapping="Wrap" Text="Pirate Plunder Calculator" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
