@@ -25,14 +25,25 @@ namespace Project_2
             InitializeComponent();
         }
 
-        private void About_Click(object sender, RoutedEventArgs e)
+       private void about_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Casey Lance\nCS1400\nProject #2");
         }
 
-        private void Close_Click(object sender, RoutedEventArgs e)
+       private void close_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
+
+        private void calculateButton_Click(object sender, RoutedEventArgs e)
+        {
+            const double INCHES_PER_MILE = 63360;
+
+            turnsPerMileTxtBox.Text = string.Format("{0:F}",
+            INCHES_PER_MILE / ((double.Parse(wheelDiameterTxtBox.Text)) * Math.PI));
+
+
+        }
+               
     }
 }
