@@ -44,6 +44,17 @@ namespace Project_2
 
 
         }
+
+        private void resetButton_Click(object sender, RoutedEventArgs e)
+        {
+            wheelDiameterTxtBox.Text = String.Empty;
+            turnsPerMileTxtBox.Text = String.Empty;
+        }
+
+        private void exitButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
                
     }
 }
