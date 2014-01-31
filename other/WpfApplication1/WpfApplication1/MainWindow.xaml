@@ -1,0 +1,23 @@
+﻿<Window x:Class="WpfApplication1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="63*"/>
+            <ColumnDefinition Width="454*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="131.195,51,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="160.195,96,0,0" VerticalAlignment="Top" Width="75" Grid.Column="1"/>
+        <Menu Height="22" Name="menu1" Width="517" HorizontalAlignment="Left" VerticalAlignment="Top" Background="{x:Null}" BorderThickness="2" Grid.ColumnSpan="2">
+            <Menu.BitmapEffect>
+                <DropShadowBitmapEffect />
+            </Menu.BitmapEffect>
+            <MenuItem Header="_File">
+                <MenuItem x:Name="Open" Header="_Open" IsCheckable="true" Click="MenuItem_Click"/>
+                <MenuItem x:Name="Close" Header="_Close" IsCheckable="true" Click="Close_Click" />
+                <MenuItem Header="_Save" IsCheckable="true"/>
+            </MenuItem>
+        </Menu>
+    </Grid>
+</Window>
