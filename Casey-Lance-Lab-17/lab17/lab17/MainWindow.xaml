@@ -1,0 +1,21 @@
+﻿<Window x:Class="lab17.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Shipping" Height="213.808" Width="160.356">
+    <Grid>
+        <Menu Height="22" Name="menu1" Width="517" HorizontalAlignment="Left" VerticalAlignment="Top" Background="{x:Null}" BorderThickness="2" Grid.ColumnSpan="3" Margin="0,0,-187,0">
+            <Menu.BitmapEffect>
+                <BevelBitmapEffect/>
+            </Menu.BitmapEffect>
+            <MenuItem Header="_File" FontWeight="Bold">
+                <MenuItem x:Name="about" Header="_About" Click="about_Click" Foreground="#FF020202"/>
+                <MenuItem x:Name="close" Header="_Close" Click="close_Click" Foreground="#FF020202"/>
+            </MenuItem>
+        </Menu>
+        <RadioButton x:Name="StandardShippingBtn1" Content="Standard" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="Shipping Method" Checked="StandardShippingBtn_Checked" Margin="23,78,0,0"/>
+        <RadioButton x:Name="SameDayShippingBtn1" Content="Same Day" HorizontalAlignment="Left" VerticalAlignment="Top" Checked="SameDayShippingBtn_Checked" GroupName="Shipping Method" Margin="23,58,0,0"/>
+        <RadioButton x:Name="ExpressShippingBtn1" Content="Express" HorizontalAlignment="Left" VerticalAlignment="Top" Checked="ExpressShippingBtn_CheckedChanged" GroupName="Shipping Method" Margin="23,98,0,0"/>
+        <Label Content="Select Shipping Speed" HorizontalAlignment="Left" Margin="10,27,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="CloseBtn" Content="Close" HorizontalAlignment="Left" Margin="36,137,0,0" VerticalAlignment="Top" Width="75" Click="CloseBtn_Click"/>
+    </Grid>
+</Window>
