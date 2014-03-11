@@ -20,10 +20,16 @@ namespace project6
     /// </summary>
     public partial class MainWindow : Window
     {
+        ShippingCost aShippingCostObjectRef;
+
         public MainWindow()
         {
             InitializeComponent();
         }
+
+        double shippingSpeed;
+        double surcharge;
+        double category;
 
         private void about_Click(object sender, RoutedEventArgs e)
         {
@@ -34,5 +40,63 @@ namespace project6
         {
             this.Close();
         }
+
+        private void StandardShipping_Selected(object sender, RoutedEventArgs e)
+        {
+            shippingSpeed = 0;
+        }
+
+        private void ExpressShipping_Selected(object sender, RoutedEventArgs e)
+        {
+            shippingSpeed = 1;
+        }
+
+        private void SameDayShipping_Selected(object sender, RoutedEventArgs e)
+        {
+            shippingSpeed = 2;
+        }
+
+        private void SurchargeTrue_Checked(object sender, RoutedEventArgs e)
+        {
+            surcharge = 1;
+        }
+
+        private void SurchargeFalse_Checked(object sender, RoutedEventArgs e)
+        {
+            surcharge = 0;
+        }
+
+        private void CategoryA_Selected(object sender, RoutedEventArgs e)
+        {
+            category = 0;
+            
+          
+        }
+
+        private void CategoryB_Selected(object sender, RoutedEventArgs e)
+        {
+            category = 1;
+            
+            
+        }
+
+        private void CalculateButton_Click(object sender, RoutedEventArgs e)
+        {
+            double numberOfItems = double.Parse(ItemsTxtBox.Text);
+            //Create object
+            //save shippingCostObjectRef
+            aShippingCostObjectRef = new ShippingCost(shippingSpeed, surcharge, category, numberOfItems);
+
+            double shippingCostResult = aShippingCostObjectRef.CalcShippingCost();
+            ShippingCostTxtBox.Text = string.Format("${0:f2}", shippingCostResult);
+        }
+
+
+        
+        
+
+     
+                
+        
     }
 }
