@@ -106,7 +106,7 @@ namespace project6
                     unitCost = 3.00;
                     surchargeCalcValue = 2.50;
                 }
-                else if (surchargeValue != 0)
+                else if (surchargeValue != 1)
                 {
                     unitCost = 3.00;
                     surchargeCalcValue = 0;
@@ -119,7 +119,7 @@ namespace project6
                     unitCost = 1.45;
                     surchargeCalcValue = 2.50;
                 }
-                else if (surchargeValue != 0)
+                else if (surchargeValue != 1)
                 {
                     unitCost = 1.45;
                     surchargeCalcValue = 0;

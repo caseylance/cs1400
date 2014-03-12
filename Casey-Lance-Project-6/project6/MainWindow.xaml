@@ -1,0 +1,39 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="project6.MainWindow"
+        Title="Shipping Calculator" Height="312" Width="468" ResizeMode="NoResize" Background="#FF63637E">
+    <Grid x:Name="ItemsLabel">
+        <Menu Height="22" x:Name="menu1" Width="517" HorizontalAlignment="Left" VerticalAlignment="Top" Background="{x:Null}" BorderThickness="2" Grid.ColumnSpan="3" Margin="0,0,-187,0">
+            <Menu.BitmapEffect>
+                <BevelBitmapEffect/>
+            </Menu.BitmapEffect>
+            <MenuItem Header="_File" FontWeight="Bold" RenderTransformOrigin="0.521,0.127">
+                <MenuItem x:Name="about" Header="_About" Click="about_Click" Foreground="#FF020202"/>
+                <MenuItem x:Name="close" Header="_Close" Click="close_Click" Foreground="#FF020202"/>
+            </MenuItem>
+        </Menu>
+        <Label Content="Shipping Speed:" HorizontalAlignment="Left" Margin="55,56,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.007,0.394" FontWeight="Bold"/>
+        <Label Content="Shipment Method:" HorizontalAlignment="Left" Margin="43,99,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.007,0.394" FontWeight="Bold"/>
+        <ListBox x:Name="SurchargeListBox" HorizontalAlignment="Left" Height="102" Margin="300,56,0,0" VerticalAlignment="Top" Width="125" Background="#FF63637E">
+            <Label x:Name="SurchargeLabel" Content="HI/AK Surcharge:" FontWeight="Bold" Width="110" HorizontalAlignment="Center"/>
+            <RadioButton x:Name="SurchargeTrue" Content="Surcharge" IsThreeState="True" Checked="SurchargeTrue_Checked" ToolTip="Select if Shipment is to Hawai'i or Alaska"/>
+            <RadioButton x:Name="SurchargeFalse" Content="No Surcharge" Checked="SurchargeFalse_Checked" ToolTip="Select if Shipment is Not to Hawai'i or Alaska"/>
+        </ListBox>
+        <TextBox x:Name="ItemsTxtBox" HorizontalAlignment="Left" Height="23" Margin="161,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" Background="#FFE5E5E5" ToolTip="Enter Number of Items/Total Shipment Weight In Pounds"/>
+        <Button x:Name="CalculateButton" Content="Calculate Shipping" HorizontalAlignment="Left" Margin="181,230,0,0" VerticalAlignment="Top" Width="119" Click="CalculateButton_Click" FontWeight="Bold" ToolTip="Click to Calculate Shipping Charge"/>
+        <TextBox x:Name="UnitsLabelTxtBox" HorizontalAlignment="Left" Height="23" Margin="0,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="151" Text="Items to Ship:" HorizontalContentAlignment="Right" BorderThickness="0" FontWeight="Bold" Background="#FF63637E"/>
+        <Label Content="Shipping Cost:" HorizontalAlignment="Left" Margin="105,183,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBox x:Name="ShippingCostTxtBox" HorizontalAlignment="Left" Height="23" Margin="202,186,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" BorderThickness="0" FontWeight="Bold" Background="#FF63637E"/>
+        <ComboBox x:Name="UnitTypeComboBox" HorizontalAlignment="Left" Margin="161,99,0,0" VerticalAlignment="Top" Width="119" ToolTip="Select Shipping Method">
+            <ComboBoxItem x:Name="ByWeight" Content="By Weight" Selected="ByWeight_Selected"/>
+            <ComboBoxItem x:Name="ByItem" Content="By Item" Selected="ByItem_Selected"/>
+        </ComboBox>
+        <ComboBox x:Name="ShippingSpeedComboBox" HorizontalAlignment="Left" Margin="161,60,0,0" VerticalAlignment="Top" Width="119" ToolTip="Select Shipping Speed">
+            <ComboBoxItem x:Name="StandardShipping" Content="Standard" Selected="StandardShipping_Selected"/>
+            <ComboBoxItem x:Name="ExpressShipping" Content="Express" Selected="ExpressShipping_Selected"/>
+            <ComboBoxItem x:Name="SameDayShipping" Content="Same Day" Selected="SameDayShipping_Selected"/>
+        </ComboBox>
+        <Label Content="Shipping Calculator" Margin="0,10,0,0" VerticalAlignment="Top" Width="462" HorizontalContentAlignment="Center" FontWeight="Bold" FontSize="14" HorizontalAlignment="Right"/>
+    </Grid>
+</Window>
