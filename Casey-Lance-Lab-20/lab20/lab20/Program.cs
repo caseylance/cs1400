@@ -12,6 +12,7 @@ namespace lab20
         {
             Console.WriteLine("Would you like to roll the dice? Enter Y or N");
             char userResponse = char.Parse(Console.ReadLine());
+            userResponse = char.ToUpper(userResponse);
             
             while (userResponse != 'Y' && userResponse != 'N')
             {
@@ -42,6 +43,7 @@ namespace lab20
 
                 Console.WriteLine("Would you like to play again?  Enter Y or N");
                 userResponse = char.Parse(Console.ReadLine());
+                userResponse = char.ToUpper(userResponse);
 
                 while (userResponse != 'Y' && userResponse != 'N')
                 {
