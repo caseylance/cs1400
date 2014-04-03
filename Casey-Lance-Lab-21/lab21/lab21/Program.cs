@@ -1,8 +1,15 @@
 ﻿// File Prologue
-// Name: your name
-// CS 1400 - your section
+// Name: Casey Lance
+// CS 1400 - 601
 // Project: Passing Parameters by value and by reference
-// Date: Today
+// Date: 4/2/2014
+//Lab 21
+//---------------------------------------------------------------------
+// I declare that the following source code was written by me, or provided
+// by the instructor for this project. I understand that copying 
+// source code from any other source constitutes cheating, and that I will
+// receive a zero grade on this project if I am found in violation of
+// this policy.
 
 using System;
 
