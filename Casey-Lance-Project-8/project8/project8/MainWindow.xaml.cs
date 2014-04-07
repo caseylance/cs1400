@@ -1,6 +1,6 @@
 ﻿//Casey Lance
 //CS 1400
-//Lab #XX
+//Project #8
 
 //I declare that the following source code was written by me, or provided
 //by the instructor for this project. I understand that copying 
@@ -37,12 +37,20 @@ namespace project8
 
         private void about_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Casey Lance\nCS1400\nLab xx");
+            MessageBox.Show("Casey Lance\nCS1400\nProject 8");
         }
 
         private void close_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Dice diceGame = new Dice();       
+            DiceOneResult.Text = String.Format("{0}", diceGame.GetDiceOneValue());
+            DiceTwoResult.Text = String.Format("{0}", diceGame.GetDiceTwoValue());
+            InformationalTextBox.Text = diceGame.GetInformationalMessage();       
         }
     }
 }
