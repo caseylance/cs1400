@@ -45,7 +45,7 @@ namespace project8
             {
                 informationalMessage = "You got snake eyes!";
             }
-            else if (diceOneValue == 6 && diceTwoValue == 6)
+            else if (diceOneValue == 5 && diceTwoValue == 5)
             {
                 informationalMessage = "You got boxcars!";
             }
