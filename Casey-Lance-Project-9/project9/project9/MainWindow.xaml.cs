@@ -47,10 +47,15 @@ namespace project9
 
         private void NameAndScoreTxtBox_TouchEnter(object sender, TouchEventArgs e)
         {
-            string  userInput = NameAndScoreTxtBox.Text;
+            
+        }
 
+        private void EnterButton_Click(object sender, RoutedEventArgs e)
+        {
+            string  userInput = NameAndScoreTxtBox.Text;
             BowlingTeam teamScores = new BowlingTeam();
             teamScores.SetUserInput(userInput);
+             
         }
     }
 
