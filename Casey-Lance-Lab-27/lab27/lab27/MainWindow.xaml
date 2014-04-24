@@ -1,0 +1,18 @@
+﻿<Window x:Class="lab27.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Lab 27" Height="241.044" Width="247.388">
+    <Grid HorizontalAlignment="Left" Width="211">
+        <Menu Height="22" Name="menu1" Width="517" HorizontalAlignment="Left" VerticalAlignment="Top" Background="{x:Null}" BorderThickness="2" Grid.ColumnSpan="3" Margin="0,0,-187,0">
+            <Menu.BitmapEffect>
+                <BevelBitmapEffect/>
+            </Menu.BitmapEffect>
+            <MenuItem Header="_File" FontWeight="Bold">
+                <MenuItem x:Name="open" Header="_Open" Foreground="#FF020202" Click="open_Click"/>
+                <MenuItem x:Name="about" Header="_About" Click="about_Click" Foreground="#FF020202"/>
+                <MenuItem x:Name="close" Header="_Close" Click="close_Click" Foreground="#FF020202"/>
+            </MenuItem>
+        </Menu>
+        <TextBox x:Name="textBox" HorizontalAlignment="Right" Height="160" Margin="10,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="191"/>
+    </Grid>
+</Window>
